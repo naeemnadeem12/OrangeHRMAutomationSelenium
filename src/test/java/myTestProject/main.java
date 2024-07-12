@@ -14,6 +14,10 @@ public class main {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://adactinhotelapp.com/index.php");
+        Thread.sleep(10000);
+        driver.findElement(By.name("username")).sendKeys("naeemtester");
+        driver.findElement(By.name("password")).sendKeys("naeemtester");
+        driver.findElement(By.name("login")).click();
         Thread.sleep(2000);
         driver.quit();
 
