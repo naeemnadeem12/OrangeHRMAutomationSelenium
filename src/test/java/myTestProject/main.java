@@ -13,11 +13,7 @@ public class main {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\wajiz.pk\\Downloads\\Chrome\\chromedriver-win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("http://localhost/Employee-management-system/");
-        driver.findElement(By.xpath("//a[@href='employee/dashboard.php']")).click();
-        driver.findElement(By.name("email")).sendKeys("hamzakhan@gmail.com");
-        driver.findElement(By.name("password")).sendKeys("11");
-        driver.findElement(By.name("signin")).click();
+        driver.get("https://adactinhotelapp.com/index.php");
         Thread.sleep(2000);
         driver.quit();
 
