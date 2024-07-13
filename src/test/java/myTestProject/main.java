@@ -19,6 +19,14 @@ public class main {
         driver.findElement(By.name("password")).sendKeys("naeemtester");
         driver.findElement(By.name("login")).click();
         Thread.sleep(2000);
+        String text = driver.findElement(By.className("welcome_menu")).getText();
+        if(text.contains("Welcome to Adactin Group of Hotels"))
+            System.out.println("successfully Login");
+        driver.navigate().refresh();
+        String title = driver.getTitle();
+        System.out.println(title);
+        String url = driver.getCurrentUrl();
+        System.out.println(url);
         driver.quit();
 
     }
