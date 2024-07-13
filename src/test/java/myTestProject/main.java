@@ -15,18 +15,25 @@ public class main {
         driver.manage().window().maximize();
         driver.get("https://adactinhotelapp.com/index.php");
         Thread.sleep(10000);
-        LoginPage login = new LoginPage();
-        login.loginWithValidEmailValidPassword(driver);
+        LoginPage login = new LoginPage(driver);
+        login.loginWithValidEmailValidPassword();
 
-        //verification
+        //verify Login successfully
         String text = driver.findElement(By.className("welcome_menu")).getText();
         if(text.contains("Welcome to Adactin Group of Hotels"))
             System.out.println("successfully Login");
 
-        login.Logout(driver);
-
+        login.Logout();
+        //verify Logout successfully
+        String text1 = driver.findElement(By.className("reg_success")).getText();
+        if (text1.contains("You have successfully logged out.")){
+            System.out.println("Logout succesffully");
+        }
+        //Get Url in Console
         String url = driver.getCurrentUrl();
         System.out.println(url);
+
+        //Close Selenium Driver
         driver.quit();
     }
 }
