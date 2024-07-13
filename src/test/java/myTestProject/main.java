@@ -15,19 +15,18 @@ public class main {
         driver.manage().window().maximize();
         driver.get("https://adactinhotelapp.com/index.php");
         Thread.sleep(10000);
-        driver.findElement(By.name("username")).sendKeys("naeemtester");
-        driver.findElement(By.name("password")).sendKeys("naeemtester");
-        driver.findElement(By.name("login")).click();
-        Thread.sleep(2000);
+        LoginPage login = new LoginPage();
+        login.loginWithValidEmailValidPassword(driver);
+
+        //verification
         String text = driver.findElement(By.className("welcome_menu")).getText();
         if(text.contains("Welcome to Adactin Group of Hotels"))
             System.out.println("successfully Login");
-        driver.navigate().refresh();
-        String title = driver.getTitle();
-        System.out.println(title);
+
+        login.Logout(driver);
+
         String url = driver.getCurrentUrl();
         System.out.println(url);
         driver.quit();
-
     }
 }
