@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-07-18T22:38:41 PKT" name="Smoke suite" finished-at="2024-07-18T22:41:16 PKT" duration-ms="155687">
+    <groups>
+    </groups>
+    <test started-at="2024-07-18T22:38:41 PKT" name="training" finished-at="2024-07-18T22:41:16 PKT" duration-ms="155687">
+      <class name="myTestProject.tests.LoginTest">
+        <test-method is-config="true" signature="openPage()[pri:0, instance:myTestProject.tests.LoginTest@43301423]" started-at="2024-07-18T22:38:41 PKT" name="openPage" finished-at="2024-07-18T22:38:55 PKT" duration-ms="14352" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openPage -->
+        <test-method signature="Login()[pri:1, instance:myTestProject.tests.LoginTest@43301423]" started-at="2024-07-18T22:38:55 PKT" name="Login" description="TestCase1 Login" finished-at="2024-07-18T22:41:11 PKT" duration-ms="136254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="Logout()[pri:2, instance:myTestProject.tests.LoginTest@43301423]" started-at="2024-07-18T22:41:11 PKT" name="Logout" description="TestCase2 Logout" finished-at="2024-07-18T22:41:16 PKT" duration-ms="4680" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+        <test-method is-config="true" signature="closePage()[pri:0, instance:myTestProject.tests.LoginTest@43301423]" started-at="2024-07-18T22:41:16 PKT" name="closePage" finished-at="2024-07-18T22:41:16 PKT" duration-ms="317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closePage -->
+      </class> <!-- myTestProject.tests.LoginTest -->
+    </test> <!-- training -->
+  </suite> <!-- Smoke suite -->
+</testng-results>

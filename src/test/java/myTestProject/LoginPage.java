@@ -7,14 +7,18 @@ public class LoginPage {
 
     WebDriver driver;
 
-    LoginPage(WebDriver driver){
+    By username = new By.ByName("username");
+    By password = new By.ByName("password");
+    By loginclick = new By.ByName("login");
+
+    public LoginPage(WebDriver driver){
         this.driver = driver;
     }
 
     public void loginWithValidEmailValidPassword() throws InterruptedException {
-        driver.findElement(By.name("username")).sendKeys("naeemtester");
-        driver.findElement(By.name("password")).sendKeys("naeemtester");
-        driver.findElement(By.name("login")).click();
+        driver.findElement(username).sendKeys("naeemtester");
+        driver.findElement(password).sendKeys("naeemtester");
+        driver.findElement(loginclick).click();
         Thread.sleep(2000);
     }
 
